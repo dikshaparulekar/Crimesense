@@ -1,0 +1,40 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: crimesense_db
+    restart: always
+    environment:
+      POSTGRES_USER: crimesense_admin
+      POSTGRES_PASSWORD: crimesense_secure_password
+      POSTGRES_DB: crimesense
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: crimesense_backend
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://crimesense_admin:crimesense_secure_password@db:5432/crimesense
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: crimesense_frontend
+    restart: always
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

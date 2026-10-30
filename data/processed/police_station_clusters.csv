@@ -1,0 +1,20 @@
+city,district,police_station,total_incidents,avg_lat,avg_lon,avg_commercial_density,avg_transit_proximity,property_thefts,violent_crimes,crimes_against_women,cyber_crimes,economic_crimes,cluster_id,cluster_label
+Mumbai,Mumbai City,Colaba Police Station,651,18.916228686635943,72.82538242396313,0.8500000000000001,0.7871582181259601,275,133,119,75,49,1,Moderate Urban Residential
+Mumbai,Mumbai City,Marine Drive Police Station,521,18.94370428598848,72.8230474990403,0.7,0.7230902111324377,241,90,111,46,33,1,Moderate Urban Residential
+Mumbai,Mumbai Suburban,Andheri Police Station,1056,19.119749921401514,72.8464982689394,0.95,0.8342897727272727,487,223,173,110,63,0,High-Frequency Metro Corridor
+Mumbai,Mumbai Suburban,Bandra Police Station,954,19.05953693081761,72.82930958385744,0.92,0.7705345911949686,419,192,170,98,75,3,Peripheral Sub-District
+Mumbai,Mumbai Suburban,Borivali Police Station,811,19.22863214673243,72.85373543033292,0.8,0.7936251541307028,358,168,146,80,59,3,Peripheral Sub-District
+Mumbai,Mumbai Suburban,Dadar Police Station,867,19.017758247981543,72.84795325028836,0.9000000000000001,0.7823760092272204,416,150,154,77,70,3,Peripheral Sub-District
+Mumbai,Mumbai Suburban,Ghatkopar Police Station,860,19.086680604651164,72.90898948255814,0.82,0.7705348837209302,371,174,162,102,51,3,Peripheral Sub-District
+Mumbai,Mumbai Suburban,Kurla Police Station,1251,19.07295627977618,72.88466859392486,0.8800000000000001,0.7838689048760992,561,249,224,125,92,0,High-Frequency Metro Corridor
+Nagpur,Nagpur Urban,Dhantoli Police Station,619,21.130756996768984,79.08155088045234,0.81,0.8273505654281098,278,120,108,61,52,2,Commercial Transit Nexus
+Nagpur,Nagpur Urban,Dharampeth Police Station,562,21.141072044483984,79.06190861209964,0.78,0.7711743772241992,252,111,103,52,44,2,Commercial Transit Nexus
+Nagpur,Nagpur Urban,Pardi Police Station,700,21.149719934285717,79.14319826714286,0.7,0.7948571428571428,311,130,131,77,51,2,Commercial Transit Nexus
+Nagpur,Nagpur Urban,Sadar Police Station,686,21.160768301749272,79.0820618367347,0.82,0.761268221574344,306,150,118,63,49,2,Commercial Transit Nexus
+Nagpur,Nagpur Urban,Sitabuldi Police Station,829,21.145649048250906,79.08880407358264,0.9,0.7875392038600724,385,186,128,75,55,2,Commercial Transit Nexus
+Pune,Pune Urban,Hadapsar Police Station,863,18.5093114414832,73.92685083893396,0.8000000000000002,0.7731054461181924,355,169,182,91,66,3,Peripheral Sub-District
+Pune,Pune Urban,Hinjewadi Police Station,758,18.591649906332453,73.73923316226913,0.9,0.8138654353562005,339,157,130,87,45,1,Moderate Urban Residential
+Pune,Pune Urban,Kothrud Police Station,599,18.50735903839733,73.80690213856427,0.75,0.7824040066777964,255,114,118,66,46,1,Moderate Urban Residential
+Pune,Pune Urban,Shivajinagar Police Station,721,18.531294482662968,73.8445646962552,0.85,0.7855201109570041,336,127,149,70,39,1,Moderate Urban Residential
+Pune,Pune Urban,Swargate Police Station,992,18.502489186491935,73.85882653528226,0.89,0.8080040322580645,454,165,190,102,81,3,Peripheral Sub-District
+Pune,Pune Urban,Viman Nagar Police Station,700,18.56838475142857,73.91340238857143,0.88,0.7884,332,129,115,82,42,1,Moderate Urban Residential

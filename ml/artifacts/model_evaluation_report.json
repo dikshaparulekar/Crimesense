@@ -1,0 +1,111 @@
+{
+  "report_generated_at": "2026-10-27T05:43:56.879777+00:00",
+  "target_variable": "is_elevated_risk_day",
+  "target_description": "Binary indicator: Police Station daily crime count >= 2 (Elevated Area Risk Day)",
+  "validation_strategy": "Chronological Out-of-Time Temporal Split (Train 70%, Val 15%, Test 15%) to prevent future data leakage",
+  "train_period": "2021-01-01 to 2023-10-19 (8010 observations)",
+  "test_period": "2024-05-27 to 2024-12-30 (1717 observations)",
+  "test_class_distribution": {
+    "negative_days_below_2": 1244,
+    "positive_days_elevated_risk": 473
+  },
+  "models_evaluated": {
+    "Historical_Baseline": {
+      "model_type": "Empirical Baseline (Station Historical Median)",
+      "accuracy": 0.5265,
+      "precision": 0.3229,
+      "recall": 0.6554,
+      "f1": 0.4327,
+      "roc_auc": 0.58,
+      "pr_auc": 0.33,
+      "brier_score": 0.2055
+    },
+    "Logistic_Regression": {
+      "model_type": "Balanced Generalized Linear Model",
+      "accuracy": 0.5521,
+      "precision": 0.3238,
+      "recall": 0.5751,
+      "f1": 0.4143,
+      "roc_auc": 0.5722,
+      "pr_auc": 0.3243,
+      "brier_score": 0.248,
+      "confusion_matrix": [
+        [
+          676,
+          568
+        ],
+        [
+          201,
+          272
+        ]
+      ]
+    },
+    "Random_Forest": {
+      "model_type": "Ensemble Decision Forest (Balanced)",
+      "accuracy": 0.5568,
+      "precision": 0.3494,
+      "recall": 0.7061,
+      "f1": 0.4675,
+      "roc_auc": 0.6471,
+      "pr_auc": 0.3766,
+      "brier_score": 0.2289,
+      "confusion_matrix": [
+        [
+          622,
+          622
+        ],
+        [
+          139,
+          334
+        ]
+      ]
+    },
+    "XGBoost": {
+      "model_type": "Gradient Boosted Decision Trees (Cost-Sensitive)",
+      "accuracy": 0.5562,
+      "precision": 0.3551,
+      "recall": 0.7484,
+      "f1": 0.4816,
+      "roc_auc": 0.6583,
+      "pr_auc": 0.3958,
+      "brier_score": 0.2288,
+      "confusion_matrix": [
+        [
+          601,
+          643
+        ],
+        [
+          119,
+          354
+        ]
+      ]
+    }
+  },
+  "champion_model": "XGBoost",
+  "feature_importance": {
+    "transit_proximity_km": 0.3853,
+    "commercial_density": 0.1652,
+    "station_baseline_rate": 0.1185,
+    "is_monsoon": 0.1046,
+    "rolling_30d_past_count": 0.08,
+    "is_weekend": 0.0787,
+    "rolling_7d_past_count": 0.0678
+  },
+  "clustering_summary": {
+    "clusters_identified": 4,
+    "stations_clustered": 19,
+    "cluster_distribution": {
+      "1": 6,
+      "3": 6,
+      "2": 5,
+      "0": 2
+    },
+    "cluster_labels": {
+      "0": "High-Frequency Metro Corridor",
+      "1": "Moderate Urban Residential",
+      "2": "Commercial Transit Nexus",
+      "3": "Peripheral Sub-District"
+    }
+  },
+  "disclaimer": "Academic model demonstration trained on synthetic urban benchmark dataset. Does not imply individual surveillance or real-world targeting."
+}

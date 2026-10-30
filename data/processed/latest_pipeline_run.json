@@ -1,0 +1,36 @@
+{
+  "run_id": "RUN-20261029-061918",
+  "timestamp": "2026-10-29T06:19:18.912030+00:00",
+  "input_file": "data/synthetic/maharashtra_urban_synthetic.csv",
+  "validation_status": "PASSED",
+  "data_quality_score": 98.4,
+  "execution": {
+    "engine": "Optimized Columnar / PyArrow",
+    "status": "COMPLETED",
+    "raw_records_ingested": 15000,
+    "invalid_geo_records_filtered": 0,
+    "aggregated_feature_records": 11443,
+    "spatial_units_aggregated": 19,
+    "features_engineered": [
+      "rolling_7d_past_count",
+      "rolling_30d_past_count",
+      "station_baseline_rate",
+      "commercial_density",
+      "transit_proximity_km",
+      "is_weekend",
+      "is_monsoon"
+    ],
+    "processing_duration_seconds": 0.199,
+    "station_features_file": "data/processed\\station_daily_features.parquet",
+    "hotspot_features_file": "data/processed\\police_station_hotspots.parquet"
+  },
+  "benchmark": {
+    "workload": "15,000 Spatio-Temporal Police Records Window Aggregation",
+    "single_node_speed_records_per_sec": 75376,
+    "memory_footprint_mb": 4.8,
+    "spark_compatibility": "PySpark 3.5.9 ready (tested with local mode driver)",
+    "leakage_prevention_verified": true
+  },
+  "is_synthetic_demonstration": true,
+  "license": "Open Academic Evaluation"
+}
